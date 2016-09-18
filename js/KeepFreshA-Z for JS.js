@@ -146,7 +146,16 @@ $.each(A_Z.children('li'), function(i) {
 	}
 })
 //右下角的小飞机
-	$('.game_plan').hover(function (),function ())
+	$('.game_plan').hover(function () {
+		var t=parseInt($('.game_plan').css('background-position-y'));
+		timer=setInterval(run,25)
+		function run() {
+			t--;
+			$('.game_plan').css('background-position-y',t)
+		}
+	},function () {
+		clearInterval(timer)
+	})
 });
 
 
