@@ -37,7 +37,7 @@ $(function () {
 				var y = (e.pageY - this.offsetTop - (h / 2)) * (h > w ? (w / h) : 1);
 				var direction = Math.round((((Math.atan2(y, x) * (180 / Math.PI)) + 180) / 90) + 3) % 4;
 				if (e.type=='mouseenter') {//进入
-					$('<embed src="../sings/商务简短提示音.mp3" hidden="true" class="embed_hover"/>').appendTo($('body'));
+					$('<embed src="sound/商务简短提示音.mp3" hidden="true" class="embed_hover"/>').appendTo($('body'));
 					$(this).children('div').stop().animate({
 						'fontSize':'40px',
 						'fontWeight':'700',
