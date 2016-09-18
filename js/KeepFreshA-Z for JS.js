@@ -12,11 +12,11 @@ $(function () {
 		if (i==0 || i==27) {
 			if (i==27) {
 				$(this).on('click',function () {
-					window.location.href="../其他子网页/打飞机/打飞机.html";
+					window.location.href="https://luxiaoli.github.io/KeepFreshA-Z.html";
 				})
 			} else{
 				$(this).on('click',function () {
-					window.location.href="../Keep Fresh.html";
+					window.location.href="https://luxiaoli.github.io/KeepFreshA-Z.html";
 				})
 			}			
 		}else{
