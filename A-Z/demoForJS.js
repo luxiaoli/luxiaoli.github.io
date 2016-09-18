@@ -122,7 +122,7 @@ $('.xia').on('click',function () {
 	},900)
 })
 $('.btn-slide').hover(function () {
-	$('<embed src="../../sings/水滴.mp3" hidden="true" class="embed_hover"/>').appendTo($('body'));
+	$('<embed src="sound/水滴.mp3" hidden="true" class="embed_hover"/>').appendTo($('body'));
 },function () {
 	$('.embed_hover').remove()
 })
