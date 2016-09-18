@@ -81,7 +81,7 @@ $('#goHome').click(function () {
 	},900)
 })
 $('#goHome').on('mouseenter',function () {
-	$('<embed src="../../sings/钢琴音.mp3" hidden="true" class="embed_enter"/>').appendTo($('body'));
+	$('<embed src="sound/钢琴音.mp3" hidden="true" class="embed_enter"/>').appendTo($('body'));
 })
 $('.shang').on('click',function () {
 	console.log('上')
