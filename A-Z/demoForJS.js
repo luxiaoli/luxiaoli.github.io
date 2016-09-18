@@ -81,7 +81,7 @@ $('#goHome').click(function () {
 	},900)
 })
 $('#goHome').on('mouseenter',function () {
-	$('<embed src="sound/钢琴音.mp3" hidden="true" class="embed_enter"/>').appendTo($('body'));
+	$('<embed src="/sound/钢琴音.mp3" hidden="true" class="embed_enter"/>').appendTo($('body'));
 })
 $('.shang').on('click',function () {
 	console.log('上')
@@ -122,7 +122,7 @@ $('.xia').on('click',function () {
 	},900)
 })
 $('.btn-slide').hover(function () {
-	$('<embed src="sound/水滴.mp3" hidden="true" class="embed_hover"/>').appendTo($('body'));
+	$('<embed src="/sound/水滴.mp3" hidden="true" class="embed_hover"/>').appendTo($('body'));
 },function () {
 	$('.embed_hover').remove()
 })
