@@ -1,49 +1,384 @@
+
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html mip>
+
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<title>jQuery在线试卷答题代码 - A5源码</title>
- 
-<link rel="stylesheet" href="css/bootstrap.css">
-<style type="text/css">
-	.testCon{padding: 5px 15px;}
-	h4.tesTitle{color: #00B895;}
-	.test-form-box{max-height: 660px;overflow: auto;}
-	.assignment{margin: 30px 0 60px;text-align: center;}
-	.assignment .btn{background: #00B895;width: 120px;font-size: 18px;border-color: #00B895;}
-	#testForm .testCon:nth-child(odd){background: #eee;}
-	label{font-weight: normal;}
-	.jxz-title{text-align: justify;}
-	.topic-answer{display: none;}
-</style>
- 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,viewport-fit=cover,minimum-scale=1,initial-scale=1">
+    
+    <link rel="stylesheet" href="https://www.wjx.cn/newwjx/css/default.css?v=5" />
+    <link rel="stylesheet" href="https://www.wjx.cn/xzh/css/phone.css?v=6" />
+    <link rel="canonical" href="https://www.wjx.cn/jq/45338218.aspx">
+   
+    <title>大学生消费喜好情况调查问卷_问卷星</title>
+    <style mip-custom>
+        body {
+            font-family: "microsoft yahei";
+            color: #323232;
+            min-width: 100%;
+        }
+        mip-fixed {
+            bottom: 120px !important;
+            right: 12px !important;
+        }
+
+        mip-gototop {
+            width: 40px;
+            height: 40px;
+            border: none;
+            background-image: url(/images/newimg/wjx-phone/btn.png);
+            background-repeat: no-repeat;
+            background-position: 0 -40px;
+        }
+
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            mip-gototop {
+                background-image: url(/images/newimg/wjx-phone/btn@2x.png);
+                background-size: 40px 80px;
+            }
+        }
+
+        @media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 458dpi) {
+            mip-gototop {
+                background-image: url(/images/newimg/wjx-phone/btn@3x.png);
+                background-size: 40px 80px;
+            }
+        }
+      
+        .cambrian__box {
+            border-top: 1px solid #e0e0e0;
+        }
+        .normalcut{
+            font-size:14px;font-weight:normal;
+        }
+        .topic__dottedLine {
+            border-top: 1px dashed #c2c2c2;
+        }
+        .marginT10 {
+            margin-top: 10px !important;
+        }
+        .marginT20 {
+            margin-top: 20px !important;
+        }
+        .bottom_btn_wrap {
+            background:#fff;
+            text-align: center;
+            position: fixed;
+        
+            bottom: 0px;
+            padding: 4px 20px 24px;
+        
+           width: 100%;
+        }
+        .bottom_btn{
+             
+                display:inline-block;
+             
+            border-radius: 6px;
+          
+            height: 45px;
+            line-height: 45px;
+            text-align:center;
+            color:#fff;
+            font-size: 16px;
+            background:#1ea0fa;
+            
+        }
+        .bottom_btn:hover{
+          color:#fff;
+        }
+         .topic__type{
+             padding-bottom:76px;
+         }
+         .goBackBtn{
+            display:none;
+        }
+        .area-btn-lf {
+           position: fixed;
+           left: 0;
+           right: 0;
+           bottom: 0;
+            flex: 1 1 auto;
+            align-self: center;
+           display: flex;
+           justify-content: center;
+           background-color: #fff;
+        }
+        .area-btn-lf a {
+            position: relative;
+            height: 40px;
+            font-size: 16px;
+            line-height: 40px;
+            border-radius: 4px;
+            outline: none;
+            text-align: center;
+            padding:0 20px;
+            margin:20px 10px;
+        }
+        .templatebutton{
+            color: #626466;
+            background-color: #fff;
+            border:1px solid #d7d7d7;
+        }
+        .copybutton {
+            color: #fff;
+            background-color: #1ea0fa;
+           border: 1px solid #1ea0fa;
+        }
+        
+            body {
+                background: #ebedf0;
+                padding-top:50px;
+            }
+            #toptitle{
+                padding-top:26px;
+            }
+             .pcWrap{
+                background:#fff;
+                width:920px;
+                *width:780px;
+                padding:0 70px;
+                margin: 0 auto;
+            }
+             .topic__type-dry .topic__type-items{
+                 display:block;
+             }
+            .bottom_btn_wrap {
+                text-align: center;
+                width: 920px;
+                bottom: 0px;
+                padding: 20px 0;
+                background: #ebedf0;
+                margin-left: -70px;
+            }
+            .bottom_btn{
+                margin: 0 25px;
+                width:200px;
+                border-radius:8px;
+            }
+            .bottom_btn:hover{
+                background:#0987db;
+                color:#fff;
+            }
+            .topic__type{
+                padding-bottom:100px;
+            }
+            mip-gototop{
+                background-color:transparent;
+                background-size:unset;
+            }
+            .goBackBtn{
+                display:inline-block;
+                border-color:#999;
+                color:#999;
+                background:#fff
+            }
+            .goBackBtn:hover{
+                background:#fff;
+                color:#666;
+                border-color:#666;
+            }
+
+        
+         .topic__type-dry,.topic__type-group,.topic__type-matrixFull .topic__type-items{
+                margin-left: 20px;
+            }
+    
+   
+    table.matrix-rating {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    table.matrix-rating tr td {
+        padding: 5px 0;
+    }
+    .matrix-rating .text__type{
+        width:50px;
+        }
+
+.ui-matrix-table {
+    width: 100%;
+    height: 32px;
+    border: 1px solid #b3b3b3;
+    background-color: #fff;
+    border-radius: 2px;
+    -webkit-appearance: none;
+}
+
+.ui-matrix-fill {
+    padding: 20px;
+    background-color: #FAFAFA;
+    border-radius: 6px;
+    border: 1px solid #f0f0f0;
+}
+
+.ui-matrix-box {
+    flex: 1 1 auto;
+    height: 32px;
+    border: 1px solid #b3b3b3;
+    background-color: #fff;
+    border-radius: 2px;
+}
+
+.ui-matrix-fill .matrix-type-items {
+    position: relative;
+    font-size: 16px;
+    color: #333;
+    line-height: 32px;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    margin-bottom: 10px;
+    /*margin-left: 12px;*/
+}
+
+.ui-control-group .matrix-type-items:last-child {
+    margin-bottom: 0;
+}
+
+.ui-matrix-header {
+    min-height: 50px;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    background-color: #E5E5E5;
+    border-radius: 6px 6px 0 0;
+}
+
+    .ui-matrix-header li {
+        flex: 1 1 auto;
+        text-align: center;
+        padding: 12px 5px;
+        line-height: 26px;
+    }
+
+.ui-matrix-body {
+    background-color: #fafafa;
+    border-radius: 0 0 6px 6px;
+    padding-bottom: 10px;
+}
+
+.ui-matrix-bodybox {
+    padding: 10px 0;
+}
+
+.ui-matrix-body .title {
+    font-size: 16px;
+    color: #333333;
+    padding: 10px 12px;
+    line-height: 20px;
+}
+
+.ui-matrix-bodybox .option {
+    display: flex;
+    display: -webkit-flex;
+}
+
+    .ui-matrix-bodybox .option .option-style {
+        flex: 1 1 auto;
+        padding: 0 5px;
+        display: flex;
+        display: -webkit-flex;
+        justify-content: center;
+    }
+
+.ui-matrix-bodybox .option-style .option-all {
+    width: 12px;
+    height: 12px;
+    background-image: url(/images/weixin/mobile/icon@2x.png);
+    background-position: 0 0;
+    background-size: 25px 25px;
+}
+
+.ui-matrix-bodybox .option-style .check {
+    background-position: -13px 0;
+}
+
+.ui-matrix-bodybox .option-style .radio {
+    background-position: 0 0;
+}
+
+@media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 458dpi) {
+    .ui-matrix-bodybox .option-style .check {
+        background-image: url(/images/weixin/mobile/icon@2x.png);
+    }
+
+    .ui-matrix-bodybox .option-style .radio {
+        background-image: url(/images/weixin/mobile/icon@3x.png);
+    }
+}
+
+.rangeslider {
+    margin: 0 15px;
+     position: relative;
+    background: #e6e6e6;
+    display: block;
+    height: 12px;
+    -webkit-box-shadow: 0px 2px 2px rgba(255, 255, 255, 0.25), inset 0px 1px 3px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 2px 2px rgba(255, 255, 255, 0.25), inset 0px 1px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(255, 255, 255, 0.25), inset 0px 1px 3px rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.ruler {
+    left: 0;
+}
+.ui-matrix-slider {
+        background-color: #fafafa;
+}
+.ui-matrix-slider .ui-matrix-bodybox {
+    padding-bottom: 20px;
+}
+
+.rangeslider-show {
+    overflow: hidden;
+    font-size: 16px;
+    color: #000;
+    padding: 0 12px;
+    margin-bottom: 10px;
+}
+    </style>
 </head>
+
 <body>
- 
-<div class="container">
-	<div class="row clearfix" id="testArea">
- 
-	</div>
-</div>
- 
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/test.js"></script>
-<script type="text/javascript">
-    $(function(){
-        //题型    1单选2多选3判断4填空5问答8论述题6完型填空7阅读理解
-        //json    格式参照data/test.json
-        //交卷    点击交卷后可查看对错
-        var test_id = 'get a test id';
-        test(test_id);
-    });
-</script>
- 
-<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
-<p>适用浏览器：360、FireFox、Chrome、Opera、傲游、搜狗、世界之窗. 不支持Safari、IE8及以下浏览器。</p>
-<p>来源：<a href="http://down.admin5.com/" target="_blank">A5源码</a></p>
-</div>
+    <div class="pcWrap">
+        <div id="toptitle">
+            <h1 class="htitle" id="htitle">
+                大学生消费喜好情况调查问卷</h1>
+        </div>
+        <div class="topic__type">
+
+            <div class="topic__inner">
+                <div class="topic__type-des">
+                    本问卷仅用于调查研究 不会有任何商业用途，请大家放心填写 ，谢谢！
+                </div>
+                <div class="topic__dottedLine"></div>
+                <div class="topic__type-body">
+                    <fieldset><legend class="topic__type-title">1. 您的性别</legend><div class="topic__type-dry"><span class="topic__type-items"><span class="radio__type"></span><label>男</label></span><span class="topic__type-items"><span class="radio__type"></span><label>女</label></span></div></fieldset><fieldset><legend class="topic__type-title">2. 年级</legend><div class="topic__type-dry"><span class="topic__type-items"><span class="radio__type"></span><label>大一</label></span><span class="topic__type-items"><span class="radio__type"></span><label>大二</label></span><span class="topic__type-items"><span class="radio__type"></span><label>大三</label></span><span class="topic__type-items"><span class="radio__type"></span><label>大四</label></span></div></fieldset><fieldset><legend class="topic__type-title">3. 在校期间的平均月消费</legend><div class="topic__type-dry"><span class="topic__type-items"><span class="radio__type"></span><label>600-1000</label></span><span class="topic__type-items"><span class="radio__type"></span><label>1000-1500</label></span><span class="topic__type-items"><span class="radio__type"></span><label>1500-2000</label></span><span class="topic__type-items"><span class="radio__type"></span><label>2000-3000</label></span><span class="topic__type-items"><span class="radio__type"></span><label>3000以上</label></span></div></fieldset><fieldset><legend class="topic__type-title">4. 您的月消费多用在哪些方面</legend><div class="topic__type-dry"><span class="topic__type-items"><span class="checkbox__type"></span><label>伙食</label></span><span class="topic__type-items"><span class="checkbox__type"></span><label>零食、小吃</label></span><span class="topic__type-items"><span class="checkbox__type"></span><label>购置衣物</label></span><span class="topic__type-items"><span class="checkbox__type"></span><label>交通通讯</label></span><span class="topic__type-items"><span class="checkbox__type"></span><label>生活用品</label></span><span class="topic__type-items"><span class="checkbox__type"></span><label>日常交际</label></span><span class="topic__type-items"><span class="checkbox__type"></span><label>学习用品</label></span><span class="topic__type-items"><span class="checkbox__type"></span><label>娱乐旅游</label></span></div></fieldset><fieldset><legend class="topic__type-title">5. 每月用于零食、小吃消费的金额约为</legend><div class="topic__type-dry"><span class="topic__type-items"><span class="radio__type"></span><label>300以下</label></span><span class="topic__type-items"><span class="radio__type"></span><label>300-600</label></span><span class="topic__type-items"><span class="radio__type"></span><label>600-1000</label></span><span class="topic__type-items"><span class="radio__type"></span><label>1000以上</label></span></div></fieldset><fieldset><legend class="topic__type-title">6. 每月购置生活用品及必需物品的费用</legend><div class="topic__type-dry"><span class="topic__type-items"><span class="radio__type"></span><label>100以下</label></span><span class="topic__type-items"><span class="radio__type"></span><label>100-500</label></span><span class="topic__type-items"><span class="radio__type"></span><label>500-1000</label></span><span class="topic__type-items"><span class="radio__type"></span><label>1000以上</label></span></div></fieldset><fieldset><legend class="topic__type-title">7. 每月用于</legend><div class="topic__type-dry"><span class="topic__type-items"><span class="radio__type"></span><label>无</label></span><span class="topic__type-items"><span class="radio__type"></span><label>1-50</label></span><span class="topic__type-items"><span class="radio__type"></span><label>50-200</label></span><span class="topic__type-items"><span class="radio__type"></span><label>200以上</label></span></div></fieldset><fieldset><legend class="topic__type-title">8. 使用视频直播APP时每月打赏礼物金额共计为</legend><div class="topic__type-dry"><span class="topic__type-items"><span class="radio__type"></span><label>不使用</label></span><span class="topic__type-items"><span class="radio__type"></span><label>观看，但不打赏</label></span><span class="topic__type-items"><span class="radio__type"></span><label>0-100</label></span><span class="topic__type-items"><span class="radio__type"></span><label>100以上</label></span></div></fieldset><fieldset><legend class="topic__type-title">9. 是否会购买奢侈品？</legend><div class="topic__type-dry"><span class="topic__type-items"><span class="radio__type"></span><label>从不</label></span><span class="topic__type-items"><span class="radio__type"></span><label>偶尔</label></span><span class="topic__type-items"><span class="radio__type"></span><label>经常</label></span></div></fieldset><fieldset><legend class="topic__type-title">10. 您觉得自己的生活费</legend><div class="topic__type-dry"><span class="topic__type-items"><span class="radio__type"></span><label>有富余</label></span><span class="topic__type-items"><span class="radio__type"></span><label>刚好够用</label></span><span class="topic__type-items"><span class="radio__type"></span><label>不够</label></span></div></fieldset><fieldset><legend class="topic__type-title">11. 花钱方式是</legend><div class="topic__type-dry"><span class="topic__type-items"><span class="radio__type"></span><label>全部计划好再花</label></span><span class="topic__type-items"><span class="radio__type"></span><label>想花就花</label></span><span class="topic__type-items"><span class="radio__type"></span><label>一边花一边打算</label></span><span class="topic__type-items"><span class="radio__type"></span><label>其他</label></span></div></fieldset><fieldset><legend class="topic__type-title">12. 购买东西时的心态？</legend><div class="topic__type-dry"><span class="topic__type-items"><span class="radio__type"></span><label>考虑性价比 尽可能做到物有所值</label></span><span class="topic__type-items"><span class="radio__type"></span><label>能省就省</label></span><span class="topic__type-items"><span class="radio__type"></span><label>只看喜好 不考虑价格</label></span></div></fieldset><fieldset><legend class="topic__type-title">13. 每月的生活费有余时，你会把它用于</legend><div class="topic__type-dry"><span class="topic__type-items"><span class="checkbox__type"></span><label>吃喝</label></span><span class="topic__type-items"><span class="checkbox__type"></span><label>旅游</label></span><span class="topic__type-items"><span class="checkbox__type"></span><label>添置衣物</label></span><span class="topic__type-items"><span class="checkbox__type"></span><label>买书</label></span><span class="topic__type-items"><span class="checkbox__type"></span><label>存起来</label></span><span class="topic__type-items"><span class="checkbox__type"></span><label>其他</label></span></div></fieldset><fieldset><legend class="topic__type-title">14. 您喜欢去哪里吃饭？</legend><div class="topic__type-dry"><span class="topic__type-items"><span class="radio__type"></span><label>学校周边</label></span><span class="topic__type-items"><span class="radio__type"></span><label>开发区</label></span><span class="topic__type-items"><span class="radio__type"></span><label>市里</label></span></div></fieldset><fieldset><legend class="topic__type-title">15. 您喜欢去哪里购物？</legend><div class="topic__type-dry"><span class="topic__type-items"><span class="checkbox__type"></span><label>学校周边</label></span><span class="topic__type-items"><span class="checkbox__type"></span><label>开发区</label></span><span class="topic__type-items"><span class="checkbox__type"></span><label>市里</label></span></div></fieldset><fieldset><legend class="topic__type-title">16. 您觉得周边缺少卖哪类产品的小店？</legend><div class="topic__type-dry"><div class="topic__type-items"><div class="text__type"></div><div></div></fieldset>
+                </div>
+            </div>
+            
+        </div>
+        <div id="divV3" class="bottom_btn_wrap">
+            <a href="/jq/45338218.aspx" id="goBack" target="_blank" class="bottom_btn goBackBtn">预览</a>
+            <a href="javascript:" id="hrefRefer" class="bottom_btn" rel="nofollow" onclick="PDF_launch(&#39;/wjx/collect.aspx?activity=45338218&#39;,500,120);">复制此问卷</a>
+        </div>
+
+    </div>
+   
+    <link href="/wjxUI/src/wjxUI.css?v=9" rel="stylesheet" />
+   <script type="text/javascript" src="/js/jquery-1.10.2.min.js"></script>
+    <script src="/layer/layer.js?v=11" type="text/javascript"></script>
+    
 </body>
+
 </html>
- 
+
+
