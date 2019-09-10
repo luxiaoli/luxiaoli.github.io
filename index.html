@@ -1,163 +1,49 @@
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>首页</title>
-
-<link rel="stylesheet" type="text/css" href="css/style.css">
-
-<!-- slide -->
-<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
-<script type="text/javascript" src="js/jquery.SuperSlide2.js"></script>
-<style>
-header {
-    background-color:black;
-    color:white;
-    text-align:center;
-    padding:40px;	 
-}
-	 	 
-}
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>jQuery在线试卷答题代码 - A5源码</title>
+ 
+<link rel="stylesheet" href="css/bootstrap.css">
+<style type="text/css">
+	.testCon{padding: 5px 15px;}
+	h4.tesTitle{color: #00B895;}
+	.test-form-box{max-height: 660px;overflow: auto;}
+	.assignment{margin: 30px 0 60px;text-align: center;}
+	.assignment .btn{background: #00B895;width: 120px;font-size: 18px;border-color: #00B895;}
+	#testForm .testCon:nth-child(odd){background: #eee;}
+	label{font-weight: normal;}
+	.jxz-title{text-align: justify;}
+	.topic-answer{display: none;}
 </style>
+ 
 </head>
-<body style="background:url(images/bgpic.jpg);">
-	
-<header>
-<h1 style="font-family:sans-serif;font-size:30px;">href of demo</h1>
-<h6 style="text-align:right;">xiaoli<h6>
-</header>
-<div class="friend">
-    <div class="mr_frbox">
-        <img class="mr_frBtnL prev" src="images/mfrl.gif" />
-        <div class="mr_frUl">
-            <ul id="mr_fu">
-                <li><a href="https://luxiaoli.github.io/resume.html">
-                    <img src="images/i.jpg" />
-                </a>
-                    <div class="mr_zhe">
-                        <div class="mr_zhe_i">
-                            <h1>
-                                I</h1>
-                            <div class="mr_zhe_p">
-                                <h3>
-                                    <span>在线简历</span>resume</h3>
-                            </div>
-                        </div>
-                        <div class="mr_zhe_hover">
-                            <h1>
-                                <img src="images/plus.gif"></h1>
-                            <div class="mr_zhe_p">
-                                <h3>
-                                    <span>参考范先生</span>from Fan</h3>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li><a href="https://luxiaoli.github.io/html5.html">
-                    <img src="images/i2.jpg" />
-                </a>
-                    <div class="mr_zhe">
-                        <div class="mr_zhe_i">
-                            <h1>
-                                E</h1>
-                            <div class="mr_zhe_p">
-                                <h3>
-                                    <span>html5游戏切水果</span>game fruit war</h3>
-                            </div>
-                        </div>
-                        <div class="mr_zhe_hover">
-                            <h1>
-                                <img src="images/plus.gif"></h1>
-                            <div class="mr_zhe_p">
-                                <h3>
-                                    <span>参考百度js团队</span>from Baidu jsteam</h3>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li><a href="https://luxiaoli.github.io/KeepFreshA-Z.html">
-                    <img src="images/i3.jpg" />
-                </a>
-                    <div class="mr_zhe">
-                        <div class="mr_zhe_i">
-                            <h1>
-                                S</h1>
-                            <div class="mr_zhe_p">
-                                <h3>
-                                    <span>名人名言</span>mottos</h3>
-                            </div>
-                        </div>
-                        <div class="mr_zhe_hover">
-                            <h1>
-                                <img src="images/plus.gif"></h1>
-                            <div class="mr_zhe_p">
-                                <h3>
-                                    <span>参考梅</span>from Mei</h3>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li><a href="">
-                    <img src="images/i4.jpg" />
-                </a>
-                    <div class="mr_zhe">
-                        <div class="mr_zhe_i">
-                            <h1>
-                                A</h1>
-                            <div class="mr_zhe_p">
-                                <h3>
-                                    <span>待用</span>to be continue</h3>
-                            </div>
-                        </div>
-                        <div class="mr_zhe_hover">
-                            <h1>
-                                <img src="images/plus.gif"></h1>
-                            <div class="mr_zhe_p">
-                                <h3>
-                                    <span>待用</span>to be continue</h3>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <img class="mr_frBtnR next" src="images/mfrr.gif" />
-    </div>
+<body>
+ 
+<div class="container">
+	<div class="row clearfix" id="testArea">
+ 
+	</div>
 </div>
-
+ 
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/test.js"></script>
 <script type="text/javascript">
-$(document).ready(function () {
-	
-	/* 图片滚动效果 */
-	$(".mr_frbox").slide({
-		titCell: "",
-		mainCell: ".mr_frUl ul",
-		autoPage: true,
-		effect: "leftLoop",
-		autoPlay: true,
-		vis: 4
-	});
-	
-	/* 鼠标悬停图片效果 */
-	$(".mr_zhe_hover").css("top", $('.mr_zhe').eq(0).height());
-	$("li").mouseout(function (e) {
-		if ((e.pageX < $(this).offset().left || e.pageX > ($(this).offset().left + $(this).width())) || (e.pageY < $(this).offset().top || e.pageY > ($(this).offset().top + $(this).height()))) {
-			$(this).find('.mr_zhe_i').show();
-			$(this).find('.mr_zhe_hover').hide().stop().animate({ top: '190px' }, { queue: false, duration: 190 });
-			return false;
-		}
-
-	});
-	$('.mr_zhe').mouseover(function (event) {
-		$(this).find('.mr_zhe_i').hide();
-		$(this).find('.mr_zhe_hover').show().stop().animate({ top: '190px' }, { queue: false, duration: 190 });
-		return false;
-	});
-	
-});
+    $(function(){
+        //题型    1单选2多选3判断4填空5问答8论述题6完型填空7阅读理解
+        //json    格式参照data/test.json
+        //交卷    点击交卷后可查看对错
+        var test_id = 'get a test id';
+        test(test_id);
+    });
 </script>
-
-
+ 
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+<p>适用浏览器：360、FireFox、Chrome、Opera、傲游、搜狗、世界之窗. 不支持Safari、IE8及以下浏览器。</p>
+<p>来源：<a href="http://down.admin5.com/" target="_blank">A5源码</a></p>
+</div>
 </body>
 </html>
+ 
